@@ -45,3 +45,17 @@ func estimateBrewTime (cups int, secondsPerCup int) (totalTimeSeconds int, info 
 ```
 
 > Particularly, I don't think this is a good practice. I doesn't make much sense and makes the code harder to read.
+
+### Named function literals
+
+Inside a function, we can't declare a regular named function, so we have to use **named function literals**. That means assigning an unnamed function to a variable:
+
+```
+func main () {
+    calculateTax := func (amount float64) float64 {
+        return amount * 0.20
+    }
+}
+```
+
+This proves that functions in **Go** are simply values.
