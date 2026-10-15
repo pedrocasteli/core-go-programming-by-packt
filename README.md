@@ -67,3 +67,19 @@ We can think of it as a function that carries around a backpack filled with vari
 If I understand it correctly, we need **two functions** in order to have a closure function: The "mother" function, that is called once, to create the closure function, which is then called several times.
 
 In the example in the `08_closures.go` file, the `createTemperatureAdjuster()` function creates the `originalTemperature` variable. It also returns another function that "closes over" (captures) `originalTemperature`. Each time we call te returned function `adjustTemperature`, it remembers the last value of `originalTemperature` and can update it. It's worth mentioning that outer function parameters are local variables, too.
+
+## Module 02 - Pointers
+
+To get the address of a variabçe, we use the `&` symbol. To display it using the `fmt` package, we use `%p`:
+
+```
+fmt.Printf("Address in memory is: %p", &var01)
+```
+
+We can also declare function parameters as pointers. That way, we pass an address (&) as argument and handle the variable directly in its memory address:
+
+```
+func applyDiscount(price *float64, discountRate float64) {
+    *price = *price - (*price * discountRate)
+}
+```
