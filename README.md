@@ -59,3 +59,11 @@ func main () {
 ```
 
 This proves that functions in **Go** are simply values.
+
+### Closures in functions
+
+A closure is a **function value that references variables from outside its body**.
+We can think of it as a function that carries around a backpack filled with variables it needs.
+If I understand it correctly, we need **two functions** in order to have a closure function: The "mother" function, that is called once, to create the closure function, which is then called several times.
+
+In the example in the `08_closures.go` file, the `createTemperatureAdjuster()` function creates the `originalTemperature` variable. It also returns another function that "closes over" (captures) `originalTemperature`. Each time we call te returned function `adjustTemperature`, it remembers the last value of `originalTemperature` and can update it. It's worth mentioning that outer function parameters are local variables, too.
