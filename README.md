@@ -136,3 +136,18 @@ var asianCountries []string = countries[2:6]
 
 Modifying a slice also modifies the underlying array.
 It also modifies any other slices that were created with that array, assuming the slices have common elements of the array.
+
+### Different ways to create slices
+
+We can create a slice literal without explicitly having to create an array first:
+
+```
+var slice []int = []int{1, 2, 3}
+slice := []int{1, 2, 3}
+```
+
+If we want to create a slice but don't yet know what elements to put in it, we can use the `make()` function:
+
+```
+slice = make([]string, 3)
+```
