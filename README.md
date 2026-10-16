@@ -83,3 +83,21 @@ func applyDiscount(price *float64, discountRate float64) {
     *price = *price - (*price * discountRate)
 }
 ```
+
+## Module 03 - Arrays
+
+If we just declare an array, without specifying its elements, all the elements are created of type zero.
+An array of strings, for instance, is created with empty strings:
+
+```
+var coffeeSizes [3]string
+// [  ]
+```
+
+To fill the array, we can specify the index and then the value of it:
+
+```
+coffeeSizes[0] = "Small"
+coffeeSizes[1] = "Medium"
+coffeeSizes[2] = "Large"
+```
