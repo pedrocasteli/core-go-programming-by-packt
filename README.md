@@ -101,3 +101,16 @@ coffeeSizes[0] = "Small"
 coffeeSizes[1] = "Medium"
 coffeeSizes[2] = "Large"
 ```
+
+### Array Literals
+
+When we declare a variable using `var`, we have to specify _either the type or value (or both)_.
+And when we use `:=`, we _have to_ specify the value.
+Array literals are arrays that are created and immediately assigned values to:
+
+```
+// Maneiras de declarar um array usando array literal
+var countries [3]string = [2]string{"Brazil", "USA", "Canada"}
+var countires = [3]string{"Brazil", "USA", "Canada"}
+countries := [3]string{"Brazil", "USA", "Canada"}
+```
