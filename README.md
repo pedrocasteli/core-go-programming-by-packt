@@ -104,7 +104,7 @@ coffeeSizes[2] = "Large"
 
 ### Array Literals
 
-When we declare a variable using `var`, we have to specify _either the type or value (or both)_.
+When we declare a variable using `var`, we have to specify **either the type or value (or both)**.
 And when we use `:=`, we _have to_ specify the value.
 Array literals are arrays that are created and immediately assigned values to:
 
@@ -113,4 +113,21 @@ Array literals are arrays that are created and immediately assigned values to:
 var countries [3]string = [2]string{"Brazil", "USA", "Canada"}
 var countires = [3]string{"Brazil", "USA", "Canada"}
 countries := [3]string{"Brazil", "USA", "Canada"}
+```
+
+### Slices
+
+Because of their size flexibility, slices are more commonly used nowadays than arrays.
+If we specify the type of a slice variable, the only difference is that **there is no number inside square brackets**:
+
+```
+var slice []string
+```
+
+So far, the only way he mentioned for assigning values to a slice is using `[ , ]`. But that soesn't work in this case:
+
+```
+var countries [6]string = [6]string{"Belgium", "Australia", "Japan", "New Zealand", "Germany", "Thailand"}
+var asianCountries []string = countries[2:6]
+// Asian countries should be 2 AND 5, and not every single one in between
 ```
