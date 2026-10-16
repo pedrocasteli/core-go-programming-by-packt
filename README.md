@@ -131,3 +131,8 @@ var countries [6]string = [6]string{"Belgium", "Australia", "Japan", "New Zealan
 var asianCountries []string = countries[2:6]
 // Asian countries should be 2 AND 5, and not every single one in between
 ```
+
+### Relationship between array and slice
+
+Modifying a slice also modifies the underlying array.
+It also modifies any other slices that were created with that array, assuming the slices have common elements of the array.
