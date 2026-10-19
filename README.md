@@ -151,3 +151,26 @@ If we want to create a slice but don't yet know what elements to put in it, we c
 ```
 slice = make([]string, 3)
 ```
+
+### Adding elements to Slice and cap function
+
+For array, the `len` and `cap` function return the same result. For slices, however, the `cap` function return the capacity of the underlying array, which can be different from the length of the slice.
+
+To add elements to a **slice**, we can use the `append()` function:
+
+```
+dogs := []string{"Kira", "Beethoven", "Leia"}
+dogs = append(dogs, "To be named")
+```
+
+By adding another element, the capacity of the underlying array **doubles in size**. Previously, it was **3**. Now, it is **6**.
+
+What is the value of capacity (`cap`) when we use the `make()` function? It is the length of the slice. The length isn't zero because the slice is created and filled with zero values of that specific type.
+However, we can add another argument to the `make()` function:
+
+```
+slice01 := make([]string, 0, 10)
+// Length and capacity
+```
+
+In this case, we can't assign a value to specific index (`slice[0] = "Hello"`), because **no indexes exist**. We have to use `append()`.
