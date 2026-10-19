@@ -192,3 +192,7 @@ countries = append(countries[:indexToRemove], countries[indexToRemove+1:]...)
 ```
 
 Instead of `append()`, we can use `slices.Delete()` from the `slices` package.
+
+### Iterating with "FOR" loop
+
+He explained the **FOR** loop using the `range` syntax.
