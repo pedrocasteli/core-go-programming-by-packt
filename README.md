@@ -174,3 +174,21 @@ slice01 := make([]string, 0, 10)
 ```
 
 In this case, we can't assign a value to specific index (`slice[0] = "Hello"`), because **no indexes exist**. We have to use `append()`.
+
+### Removing elements from Slice
+
+**There is no specific action or function** to remove an element from a slice. Instead, you have to **create a brand new slice**.
+We can use `[:]` to get the elements before the index ogf the one we want to remove, and then specify all the other indexes we want to keep:
+
+```
+countries := []string{"Brazil", "Canada", "Austria"}
+countries = append(countries[:1], countries[2])
+```
+
+Using the `...` notation, we could:
+
+```
+countries = append(countries[:indexToRemove], countries[indexToRemove+1:]...)
+```
+
+Instead of `append()`, we can use `slices.Delete()` from the `slices` package.
