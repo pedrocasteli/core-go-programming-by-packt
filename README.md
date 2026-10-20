@@ -196,3 +196,18 @@ Instead of `append()`, we can use `slices.Delete()` from the `slices` package.
 ### Iterating with "FOR" loop
 
 He explained the **FOR** loop using the `range` syntax.
+
+## Module 04 - Control Flow
+
+### IF Statement
+
+The IF statement in Go is pretty much everything we are used to. Except **there are no parentheses** wrapping the condition.
+Also, we **can't compare variables of different types**.
+
+```
+num01 := 1
+num02 := 2.5
+
+if num02 > num 01 { }
+// Since one variable is float64 and the other is int, we can't compare them
+```
