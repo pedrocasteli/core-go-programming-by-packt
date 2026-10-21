@@ -258,6 +258,16 @@ delete(population, "Detroit")
 
 If we try to delete a value which is absent in the `map`, we don't get an error, but nothing changes.
 
+### Iterating over map
+
+We can use a `FOR ... RANGE` loop. In the case of `maps` there is no index, only key name and value:
+
+```
+for key, population := range populations {
+	fmt.Printf("%s - %d\n", key, population)
+}
+```
+
 What are the differences between arrays, slices, and maps in Go, and when you might choose to use one over the others?
 Arrays have a static size, while slices and maps can change size.
 In arrays and slices, we can access values by index. In a map, we do it by the key name.
