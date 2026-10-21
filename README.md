@@ -233,6 +233,15 @@ prices := map[string]float64 {
 - We can also use the `len()` function to get the length of the `map`.
 - To add another key-value pair, we simply assign a value to a new key: `prices["TV"] = 550.0`
 
+### Checking key existence in map
+
+To determine if a key is present in the `map`, we can do the following: Access the value of the key, and assign the result to two variables:
+
+```
+popul, exists := population["Nagasaki"]
+// returns FALSE
+```
+
 What are the differences between arrays, slices, and maps in Go, and when you might choose to use one over the others?
 Arrays have a static size, while slices and maps can change size.
 In arrays and slices, we can access values by index. In a map, we do it by the key name.
