@@ -211,3 +211,29 @@ num02 := 2.5
 if num02 > num 01 { }
 // Since one variable is float64 and the other is int, we can't compare them
 ```
+
+## Module 06 - Map Type
+
+Maps are sets of key-value pairs. To declare one, we use the `map` keyword, followed by the type of key and the type of value the keys will hold:
+
+```
+var prices map[string]float64 = map[string]float64 {
+    "Bike": 125.50,
+    "Car": 4500.00,
+}
+// Or...
+prices := map[string]float64 {
+    "Bike": 125.50,
+    "Car": 4500.00,
+}
+```
+
+- To access a value, we use the key name: `prices["Bike]`.
+- To change a value, we also use the key name: `prices["Bike"] = 90.0`.
+- We can also use the `len()` function to get the length of the `map`.
+- To add another key-value pair, we simply assign a value to a new key: `prices["TV"] = 550.0`
+
+What are the differences between arrays, slices, and maps in Go, and when you might choose to use one over the others?
+Arrays have a static size, while slices and maps can change size.
+In arrays and slices, we can access values by index. In a map, we do it by the key name.
+If we compare to JavaScript, `maps` can be thought of as arrays of objects. Although, in Go we can have array of structs, I suppose.
