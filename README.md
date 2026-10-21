@@ -242,6 +242,22 @@ popul, exists := population["Nagasaki"]
 // returns FALSE
 ```
 
+### Deleting keys from map
+
+We can use the `delete()` function:
+
+```
+var populations map[string]int = map[string]int {
+    "Sao Paulo":   12000000,
+	"Mexico City": 9000000,
+	"Sacramento":  538753,
+	"Detroit":     649095,
+}
+delete(population, "Detroit")
+```
+
+If we try to delete a value which is absent in the `map`, we don't get an error, but nothing changes.
+
 What are the differences between arrays, slices, and maps in Go, and when you might choose to use one over the others?
 Arrays have a static size, while slices and maps can change size.
 In arrays and slices, we can access values by index. In a map, we do it by the key name.
