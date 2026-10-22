@@ -282,6 +282,17 @@ As we can see, we can't add keys to this empty `map`.
 It's a runtime error, not a compilation error.
 But what is "nil"? It is a special type in **Go** that represents the zero value for a pointer, channel, func, interface, map or slice type. More complex structures, not the zero value of strings or integers, for example.
 
+## Using make function to create map
+
+When we use the `make()` function to create an empty `map`, we can add values to it without any errors:
+
+```
+populations := make(map[string]int)
+populations["Edinburgh"] = 531370
+```
+
+But this approach is more commonly used when we don't know the the keys and values, yet.
+
 What are the differences between arrays, slices, and maps in Go, and when you might choose to use one over the others?
 Arrays have a static size, while slices and maps can change size.
 In arrays and slices, we can access values by index. In a map, we do it by the key name.
