@@ -105,7 +105,7 @@ coffeeSizes[2] = "Large"
 ### Array Literals
 
 When we declare a variable using `var`, we have to specify **either the type or value (or both)**.
-And when we use `:=`, we _have to_ specify the value.
+And when we use `:=`, we **have to** specify the value.
 Array literals are arrays that are created and immediately assigned values to:
 
 ```
@@ -292,6 +292,10 @@ populations["Edinburgh"] = 531370
 ```
 
 But this approach is more commonly used when we don't know the the keys and values, yet.
+
+## Paasing map to a function
+
+**Go** always passes arguments by value, so the function receives a copy of what you pass. With a `map`, that copy doesn't contain the data. A `map` variable is really a pointer to a data structure
 
 What are the differences between arrays, slices, and maps in Go, and when you might choose to use one over the others?
 Arrays have a static size, while slices and maps can change size.
