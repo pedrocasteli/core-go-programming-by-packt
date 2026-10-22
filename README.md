@@ -268,6 +268,20 @@ for key, population := range populations {
 }
 ```
 
+### What is nil
+
+To answer that question, we are going to create an empty `map` by using the `var` keyword:
+
+```
+var populations map[string]int
+populations["Cairo"] = 10000000
+// panic: assignment to entry in nil map
+```
+
+As we can see, we can't add keys to this empty `map`.
+It's a runtime error, not a compilation error.
+But what is "nil"? It is a special type in **Go** that represents the zero value for a pointer, channel, func, interface, map or slice type. More complex structures, not the zero value of strings or integers, for example.
+
 What are the differences between arrays, slices, and maps in Go, and when you might choose to use one over the others?
 Arrays have a static size, while slices and maps can change size.
 In arrays and slices, we can access values by index. In a map, we do it by the key name.
